@@ -7,8 +7,8 @@ const app = require('./src/app');
     // setup
     
     const config = {
-        // 24 caracteres * 8 = 192 bits
         // aes-192
+        // 24 caracteres * 8 = 192 bits
         cryptoKey: 'minha-senha-super-segura',
     }
 
