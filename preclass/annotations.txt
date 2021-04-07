@@ -20,17 +20,18 @@ touch src/CryptoHelper
 index.js 
     call CryptoHelper
 
-CryptoHelper
-    createEncryptedFile
-index.js 
-    call createEncryptedFile
-CryptoHelper
-    decriptFile
-index.js 
-    call decriptFile
-
 show decrypt on website
     https://www.devglan.com/online-tools/aes-encryption-decryption
+
+CryptoHelper
+    encrypt
+index.js 
+    call encrypt
+CryptoHelper
+    decrypt
+index.js 
+    call decrypt
+
 
 touch src/customFSPromises 
     constructor() {}
@@ -63,9 +64,14 @@ openssl list -cipher-algorithms
 https://www.devglan.com/online-tools/aes-encryption-decryption
 https://encode-decode.com/aes-192-ecb-encrypt-online/
 https://whatis.techtarget.com/definition/initialization-vector-IV
+https://github.com/hex7c0/nodejs-cipher-performance
+https://medium.com/@chris_72272/what-is-the-fastest-node-js-hashing-algorithm-c15c1a0e164e
+https://nodejs.org/api/crypto.html
 
 AES works in 2 modes - CBC and ECB mode.
 
 CBC (Cipher Block Chaining) requires Initialization Vector(IV) to make each message unique.Using IV we randomize the encryption of similar blocks. So any identical plain text blocks will be encrypted into disimmilar cipher text blocks
 
 ECB(Electronic Code Book) encryption mode does not need the IV for encryption. The input plain text will be divided into blocks and each block will be encrypted with the key provided and hence identical plain text blocks are encrypted into identical cipher text blocks.
+
+The Advanced Encryption Standard, also known by its original name Rijndael, is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology in 2001
