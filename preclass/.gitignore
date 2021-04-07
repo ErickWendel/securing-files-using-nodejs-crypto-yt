@@ -1,5 +1,6 @@
 # Logs
 *.js.enc
+*.txt.enc
 logs
 *.log
 npm-debug.log*

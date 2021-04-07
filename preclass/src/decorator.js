@@ -1,7 +1,9 @@
+const { eventOrder } = require("./constants")
+
 class Decorator {
 
     static #decorate = ({ fn, when }, oldFn) => async (...args) => {
-        const [first, second] = when === "afterOriginalCall" ?
+        const [first, second] = when === eventOrder.afterOriginalCall ?
             [oldFn, fn] :
             [fn, oldFn]
 
