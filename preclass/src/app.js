@@ -2,11 +2,14 @@ const { promises } = require('fs')
 async function run() {
     
     const fileTarget = 'super-secure-file.txt.enc'
-    console.log('writing file to!', fileTarget)
-    await promises.writeFile(fileTarget, 'aee')
+    console.log('writing file to:', fileTarget)
 
-    console.log('readFile', (await promises.readFile(fileTarget)).toString())
-    console.log('terminou!')
+    const text = `É agora! ${new Date().toISOString()}`
+
+    await promises.writeFile(fileTarget, text)
+
+    console.log('decrypted content:', (await promises.readFile(fileTarget)).toString())
+    console.log('finished!')
 }
 
 module.exports = { run }

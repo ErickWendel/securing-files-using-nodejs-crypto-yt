@@ -5,10 +5,11 @@ const app = require('./src/app');
 
 ; (async () => {
     // setup
-    const vectorSize = 16
+    
     const config = {
+        // 24 caracteres * 8 = 192 bits
+        // aes-192
         cryptoKey: 'minha-senha-super-segura',
-        initializationVectorKey: Buffer.alloc(vectorSize)
     }
 
     const cryptoHelper = await CryptoHelper.setup(config)

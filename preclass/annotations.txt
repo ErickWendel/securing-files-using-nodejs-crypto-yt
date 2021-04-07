@@ -1,0 +1,46 @@
+mkdir encrypt-decrypt-file
+npm init -y 
+node -v 
+npm i -D nodemon 
+package.json 
+    add script 
+
+mkdir src 
+touch index.js 
+touch src/app.js
+    all 
+index.js 
+await app.run()
+
+show file 
+
+touch src/CryptoHelper
+    setup
+    constructor
+index.js 
+    call CryptoHelper
+
+CryptoHelper
+    createEncryptedFile
+index.js 
+    call createEncryptedFile
+CryptoHelper
+    decriptFile
+index.js 
+    call decriptFile
+
+f4c87d2d5deba9e1539690884c8a235e
+65b157f3934aef8f5119d63b95eb2c47
+
+openssl list -cipher-algorithms
+https://www.devglan.com/online-tools/aes-encryption-decryption
+https://encode-decode.com/aes-192-ecb-encrypt-online/
+https://whatis.techtarget.com/definition/initialization-vector-IV
+
+AES works in 2 modes - CBC and ECB mode.
+
+CBC (Cipher Block Chaining) requires Initialization Vector(IV) to make each message unique.Using IV we randomize the encryption of similar blocks. So any identical plain text blocks will be encrypted into disimmilar cipher text blocks
+
+ECB(Electronic Code Book) encryption mode does not need the IV for encryption. The input plain text will be divided into blocks and each block will be encrypted with the key provided and hence identical plain text blocks are encrypted into identical cipher text blocks.
+
+09974761e682fed0f9de08579889ed53da2f9dce01b8dede2a0de4d689403c89928a87cf3ee76d2164c279d0b17f7b57

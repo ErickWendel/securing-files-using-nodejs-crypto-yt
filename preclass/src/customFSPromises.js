@@ -6,7 +6,7 @@ class CustomFsPromises {
         this.cryptoHelper = cryptoHelper
     }
     async writeFile(filename, data, encoding = '') {
-        const byteArray = await this.cryptoHelper.createEncryptedFile(data);
+        const byteArray = await this.cryptoHelper.encrypt(data);
 
         return [
             filename,
@@ -15,7 +15,7 @@ class CustomFsPromises {
         ];
     }
     async readFile(data) {
-        const byteArray = await this.cryptoHelper.decriptFile(data);
+        const byteArray = await this.cryptoHelper.decrypt(data);
         return byteArray;
     }
 
