@@ -1,5 +1,4 @@
-const { createCipheriv, createDecipheriv, scrypt } = require('crypto');
-const { promisify } = require('util');
+const { createCipheriv, createDecipheriv } = require('crypto');
 
 class CryptoHelper {
     constructor({ cryptoKey, initializationVectorKey }) {
@@ -10,9 +9,8 @@ class CryptoHelper {
         })
     }
 
-    static async setup({ password, initializationVectorKey }) {
-        const key = await promisify(scrypt)(password, 'salt', 24)
-        return new CryptoHelper({ cryptoKey: key, initializationVectorKey })
+    static async setup({ cryptoKey, initializationVectorKey }) {
+        return new CryptoHelper({ cryptoKey, initializationVectorKey })
     }
 
     async createEncryptedFile(data) {

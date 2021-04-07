@@ -7,7 +7,7 @@ const app = require('./src/app');
     // setup
     const vectorSize = 16
     const config = {
-        password: 'minha-senha-super-segura',
+        cryptoKey: 'minha-senha-super-segura',
         initializationVectorKey: Buffer.alloc(vectorSize)
     }
 
